@@ -1,0 +1,235 @@
+
+/*  日历 */
+.date-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.date-nav-filter {
+  border-left: 1px solid #d9d9d9;
+  padding-left: 20rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+
+  color: #3979de;
+}
+.date-nav-icon {
+  border-right: 1px solid #d9d9d9;
+  padding-right: 20rpx;
+}
+.date-nav-list-item {
+  margin: 10rpx 10rpx;
+  border-radius: 30rpx;
+  padding: 10rpx 15rpx;
+  text-align: center;
+  font-size: 32rpx;
+  
+}
+.data-nav-month {
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  color: #52668c;
+  padding-left: 4rpx;
+}
+.date-nav-week {
+  color: #52668c;
+  font-size: 22rpx;
+  padding-bottom: 4rpx;
+}
+.date-nav-day {
+  color: #294058;
+  border-radius: 50%;
+  width: 52rpx;
+  height: 52rpx;
+  text-align: center;
+  line-height: 52rpx;
+}
+.date-nav-list-item .sel {
+  background: #808f9e;
+  color: #fff;
+ 
+}
+
+
+/* 日历 */
+.date-wrap {
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  width: 100%;
+}
+.date-content {
+  background-color: #fff;
+}
+.date-show {
+  position: relative;
+  font-family: PingFang-SC-Regular;
+  font-size: 40rpx;
+  color: #282828;
+  text-align: center;
+  /* margin: 0 auto 10rpx; */
+  padding: 30rpx 0; 
+  display: flex;
+  justify-content: center;
+}
+.gotoToday {
+  position: absolute;
+  right: 0;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.lt-arrow,
+.rt-arrow {
+  /* position: absolute; */
+  /* top: 1rpx; */
+  width: 60rpx;
+  height: 60rpx;
+}
+
+
+
+
+
+.header {
+  font-size: 0;
+  padding: 0 24rpx;
+}
+
+.header>view {
+  display: inline-block;
+  width: 14.285%;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+  border-bottom: 1px solid #D0D0D0;
+  padding: 39rpx 0;
+}
+
+.weekMark {
+  position: relative;
+}
+
+.weekMark view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #22A7F6;
+}
+
+.date-box {
+  font-size: 0;
+  padding: 10rpx 0;
+}
+.date-box .sel {
+  color: #f00
+}
+
+.date-box>view {
+  position: relative;
+  display: inline-block;
+  width: 14.285%;
+  color: #020202;
+  font-size: 40rpx;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15rpx 0;
+}
+
+.date-head {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+
+.nowDay .date-head {
+  width: 60rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #22A7F6;
+  margin: 0 auto;
+}
+
+.date-weight {
+  font-size: 22rpx;
+  padding: 15rpx 0;
+}
+
+.nowDay .date-weight {
+  color: #22A7F6;
+}
+
+.one {
+  position: absolute;
+  bottom: 0;
+  right: 5rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.two {
+  position: absolute;
+  bottom: 30rpx;
+  right: 5rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.calendar {
+  padding: 20rpx 0 20rpx 20rpx;
+}
+.calendar-item {
+  padding: 20rpx 20rpx 20rpx 0;
+  font-size: 32rpx;
+
+  border-bottom: 1px solid #d9d9d9;
+}
+.calendar-item-left {
+  width: 150rpx;
+  text-align: center;
+}
+.calendar-item-right {
+  flex: 1;
+}
+.calendar-item-right-top .icon-q {
+  width: 43rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.calendar-item-right-top .icon-wrap {
+  margin: 0 20rpx;
+}
+.calendar-item-right-top .icon-x {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 4rpx;
+}
+.calendar-item-right-top-label {
+  background-color: #52b57b;
+  color: #fff;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+.calendar-item-right-top-label-wrap .red-label {
+  background-color: #e46b67;
+}
+.calendar-item-right-center {
+  font-weight: 500;
+  margin: 10rpx 0;
+}
+.calendar-item-right-bottom text {
+  color: #999;
+  font-size: 28rpx;
+  margin-right: 15rpx;
+}

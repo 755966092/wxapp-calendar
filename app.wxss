@@ -1,0 +1,32 @@
+/* flex类名 */
+/* 定义 */
+.flex-def { display: -webkit-box;  display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;}
+
+/* 主轴居中 */
+.flex-zCenter { -webkit-box-pack: center; -moz-justify-content: center; -webkit-justify-content: center; justify-content: center; }
+/* 主轴两端对齐 */
+.flex-zBetween { -webkit-box-pack: justify; -moz-justify-content: space-between; -webkit-justify-content: space-between; justify-content: space-between; }
+/* 主轴end对齐 */
+.flex-zEnd { -webkit-box-pack: end; -moz-justify-content: flex-end; -webkit-justify-content: flex-end; justify-content: flex-end; }
+/* 主轴start对齐 */
+.flex-zStart { -webkit-box-pack: start; -moz-justify-content: start; -webkit-justify-content: start; justify-content: start; }
+
+/* 侧轴居中 */
+.flex-cCenter { -webkit-box-align: center; -moz-align-items: center; -webkit-align-items: center; align-items: center; }
+/* 侧轴start对齐 */
+.flex-cStart { -webkit-box-align: start; -moz-align-items: start; -webkit-align-items: start; align-items: start; }
+/* 侧轴底部对齐 */
+.flex-cEnd { -webkit-box-align: end; -moz-align-items: flex-end; -webkit-align-items: flex-end; align-items: flex-end; }
+/* 侧轴文本基线对齐 */
+.flex-cBaseline { -webkit-box-align: baseline; -moz-align-items: baseline; -webkit-align-items: baseline; align-items: baseline; }
+/* 侧轴上下对齐并铺满 */
+.flex-cStretch { -webkit-box-align: stretch; -moz-align-items: stretch; -webkit-align-items: stretch; align-items: stretch; }
+
+/* 主轴从上到下 */
+.flex-zTopBottom { -webkit-box-direction: normal; -webkit-box-orient: vertical; -moz-flex-direction: column; -webkit-flex-direction: column; flex-direction: column; }
+/* 主轴从下到上 */
+.flex-zBottomTop { -webkit-box-pack: end; -webkit-box-direction: reverse; -webkit-box-orient: vertical; -moz-flex-direction: column-reverse; -webkit-flex-direction: column-reverse; flex-direction: column-reverse; }
+/* 主轴从左到右 */
+.flex-zLeftRight { -webkit-box-direction: normal; -webkit-box-orient: horizontal; -moz-flex-direction: row; -webkit-flex-direction: row; flex-direction: row; }
+/* 主轴从右到左 */
+.flex-zRightLeft { -webkit-box-pack: end; -webkit-box-direction: reverse; -webkit-box-orient: horizontal; -moz-flex-direction: row-reverse; -webkit-flex-direction: row-reverse; flex-direction: row-reverse; }

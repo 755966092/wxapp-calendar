@@ -1,0 +1,75 @@
+  <view class="date-nav">
+    <view class="date-nav-icon" bindtap="showCalendar">
+      {{month}}月
+    </view>
+    <!-- <text class="data-nav-month">{{month}}/</text> -->
+    <view class="date-nav-list-item " data-date="{{item}}" bindtap="dateClickTitle" wx:for="{{dateNavDate}}" wx:key="{{index}}">
+      <view class="date-nav-week">{{item.week}}</view>
+      <view class="date-nav-day {{index==2?'sel':''}}">{{item.dateNum}}</view>
+    </view>
+    
+  </view>
+  <view class="calendar">
+          <view class="calendar-item flex-def flex-cCenter" wx:for="{{calendarData}}" wx:key="{{index}}">
+            <view class="calendar-item-left">
+              {{item.time}}
+            </view>
+            <view class="calendar-item-right">
+              <view class="calendar-item-right">
+                <view class="calendar-item-right-top flex-def flex-cCenter">
+                  <image class="icon-q" src="{{item.img}}" />
+                  <text>{{item.country}}</text>
+                  <view class="icon-wrap">
+                    <image class="icon-x" src="../../images/x1.png" wx:for="{{item.number}}" wx:key="index" />
+                    <image class="icon-x" src="../../images/x2.png" wx:for="{{5-item.number}}" wx:key="index" />
+                  </view>
+                  <view wx:if="{{item.label}}" class="calendar-item-right-top-label-wrap">
+                    <text class="calendar-item-right-top-label {{item.label=='利空金银'?'red-label':''}}">{{item.label}}</text>
+                  </view>
+                </view>
+                <view class="calendar-item-right-center">
+                  {{item.title}}
+                </view>
+                <view class="calendar-item-right-bottom flex-def flex-cCenter">
+                  <text>前值:{{item.qianzhi}}</text>
+                  <text>预期:{{item.yuqi}}</text>
+                  <text>公布:{{item.gongbu}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+  <view class='date-wrap' wx:if="{{dateHide}}" bindtap="hideCalendar">
+          <view class="date-content" catchtap="stopPropation">
+            <view class='date-show'>
+              <view class='lt-arrow' catchtap='lastMonth'>
+                <text decode>&lt;</text>
+              </view>
+              <view class="date-year">
+                {{year}}年{{month}}月
+              </view>
+              <view class='rt-arrow' catchtap='nextMonth'>
+                <text decode>&gt;</text>
+              </view>
+              <view class="gotoToday" bindtap="gotoToday">
+                回到今天
+              </view>
+            </view>
+            <view class='header'>
+              <view wx:for='{{date}}' wx:key="{{index}}" class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>
+                {{item}}
+                <view></view>
+              </view>
+            </view>
+            <view class='date-box'>
+              <view wx:for='{{dateArr}}' wx:key="{{index}}" catchtap="clickDateDay" data-datenum="{{item.dateNum}}" data-year="{{item.year}}"
+                data-month="{{item.month}}" class='{{today==item.dateNum&&curMonth==item.month&&curYear==item.year?"sel":""}} {{isToday == item.isToday ? "nowDay" : ""}}'
+                data-date='{{item.isToday}}'>
+                <view class='date-head'>
+                  <view>{{item.dateNum}}</view>
+                </view>
+                <!-- <view class='date-weight'>{{item.weight}}</view>  -->
+              </view>
+            </view>
+          </view>
+        </view>
