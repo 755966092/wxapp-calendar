@@ -9,7 +9,7 @@ Page({
     dateNavDate: [],
     // 日历相关
     year: 0,
-    month: 0,
+    month: 11,
     today: 0,
     curMonth: 0,
     curYear: 0,
@@ -24,6 +24,9 @@ Page({
     // 初始化日历标题
     this.initCalendar(new Date());
     this.mockCalendarData();
+    this.setData({
+      month: new Date().getMonth()+1
+    })
   },
   // 初始化日历标题
   initCalendar: function (today) {
@@ -77,6 +80,8 @@ Page({
         today: now.getDate()
       });
     }
+  
+
   },
   dateInit: function (setYear, setMonth, flag) {
     if (this.data.dateArr.length == 0 || !flag) {
